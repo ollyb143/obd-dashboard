@@ -5,4 +5,6 @@
 #ifndef OBD_H
 #define OBD_H
 
+const char* getRPM();
+
 #endif //OBD_H

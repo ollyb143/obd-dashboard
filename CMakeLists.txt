@@ -23,7 +23,12 @@ include_directories(${SDL2_INCLUDE_DIRS})
 link_directories(${SDL2_LIBRARY_DIRS})
 add_definitions(${SDL2_CFLAGS_OTHER})
 
-target_link_libraries(obd_dashboard ${SDL2_LIBRARIES})
+# Link SDL2 and SDL2_ttf manually
+target_link_libraries(obd_dashboard
+    ${SDL2_LIBRARIES}
+    ${SDL2TTF_LIBRARIES}
+    SDL2_ttf               # <-- manually add this
+)
 
 add_subdirectory(simulator)
 
