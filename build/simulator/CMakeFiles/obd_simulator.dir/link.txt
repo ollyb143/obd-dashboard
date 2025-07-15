@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/obd_simulator.dir/link.d CMakeFiles/obd_simulator.dir/obd_simulator.cpp.o -o obd_simulator
