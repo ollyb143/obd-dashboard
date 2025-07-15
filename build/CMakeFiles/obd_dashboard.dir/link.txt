@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/obd_dashboard.dir/link.d CMakeFiles/obd_dashboard.dir/main.cpp.o CMakeFiles/obd_dashboard.dir/src/obd.cpp.o CMakeFiles/obd_dashboard.dir/src/bluetooth.cpp.o CMakeFiles/obd_dashboard.dir/src/dashboard.cpp.o -o obd_dashboard  -lSDL2 -lSDL2_ttf

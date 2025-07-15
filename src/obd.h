@@ -5,6 +5,11 @@
 #ifndef OBD_H
 #define OBD_H
 
-const char* getRPM();
+#include <time.h>
+#include <cstdlib>
+#include <stdio.h>
+#include <stddef.h>
+
+const int getRPM(int* rpm, char* buffer, size_t size);
 
 #endif //OBD_H

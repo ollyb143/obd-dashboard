@@ -5,14 +5,8 @@
 #include "dashboard.h"
 #include "obd.h"
 
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_main.h>
-
-#include <stdlib.h>
-#include <unistd.h>
-#include <iostream>
-
+int rpmValue = 0;
+char rpmBuffer[16];
 
 int main() {
     
@@ -35,8 +29,9 @@ int main() {
       exit(1);
     }
 
-    // Pixels from the text
-    SDL_Surface* surfaceText = TTF_RenderText_Solid(myFont, getRPM(), {255, 255, 255});
+    // Pixels from the Font
+    getRPM(&rpmValue, rpmBuffer, sizeof(rpmBuffer));
+    SDL_Surface* surfaceText = TTF_RenderText_Solid(myFont, rpmBuffer, {255, 255, 255});
 
     // Setup the texture
     SDL_Texture* textureText = SDL_CreateTextureFromSurface(renderer, surfaceText);
@@ -63,8 +58,9 @@ int main() {
       }
       
       // Handle Updates
-      SDL_Surface* surfaceText = TTF_RenderText_Solid(myFont, getRPM(), {255, 255, 255});
-      SDL_Texture* textureText = SDL_CreateTextureFromSurface(renderer, surfaceText);
+      getRPM(&rpmValue, rpmBuffer, sizeof(rpmBuffer));
+      surfaceText = TTF_RenderText_Solid(myFont, rpmBuffer, {255, 255, 255});
+      textureText = SDL_CreateTextureFromSurface(renderer, surfaceText);
       SDL_FreeSurface(surfaceText);
 
       // Clear and Draw screen
@@ -84,6 +80,6 @@ int main() {
 
     SDL_DestroyWindow(win);
     
-    SDL_Quit();
+    SDL_Quit;
     return 0;
 }

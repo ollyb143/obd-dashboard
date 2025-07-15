@@ -1,0 +1,6 @@
+/home/pcuser/Documents/obd-dashboard/build/CMakeFiles/obd_dashboard.dir
+/home/pcuser/Documents/obd-dashboard/build/CMakeFiles/edit_cache.dir
+/home/pcuser/Documents/obd-dashboard/build/CMakeFiles/rebuild_cache.dir
+/home/pcuser/Documents/obd-dashboard/build/simulator/CMakeFiles/obd_simulator.dir
+/home/pcuser/Documents/obd-dashboard/build/simulator/CMakeFiles/edit_cache.dir
+/home/pcuser/Documents/obd-dashboard/build/simulator/CMakeFiles/rebuild_cache.dir
